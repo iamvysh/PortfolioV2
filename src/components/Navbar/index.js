@@ -6,6 +6,11 @@ import { FaBars } from "react-icons/fa";
 import { Bio } from "../../data/constants";
 // import { MenuRounded } from "@mui/icons-material";
 // import Experience from "../Experience";
+import DarkModeOutlinedIcon from "@mui/icons-material/DarkModeOutlined";
+import LightModeOutlinedIcon from "@mui/icons-material/LightModeOutlined";
+import { Avatar } from "@mui/material";
+import { useMode } from "../../store/modeStore";
+
 
 const Nav = styled.div`
   background-color: ${({ theme }) => theme.card_light};
@@ -49,7 +54,10 @@ const MobileIcon = styled.div`
   display: none;
 
   @media screen and (max-width: 768px) {
-    display: block;
+    display: flex;
+    align-items:center;
+    justify-content:center;
+    
 
     transform: translate(-100, 50%);
     font-size: 1.5rem;
@@ -160,6 +168,7 @@ const MobileMenu = styled.div`
 const Navbar = () => {
   const [open, setOpen] = React.useState(false);
   const theme = useTheme();
+  const {mode,setMode}=useMode()
   return (
     <Nav>
       <NavContainer>
@@ -168,12 +177,12 @@ const Navbar = () => {
           style={{
             display: "flex",
             alignItems: "center",
-            color: "white",
+            color: `${mode?'black':'white'}`,
             marginBottom: "20",
             cursor: "pointer",
           }}
         >
-          <DiCssdeck size="3rem" /> <Span>Iam Vysh</Span>
+          <DiCssdeck size="3rem"  /> <Span>Iam Vysh</Span>
         </NavLogo>
         {/* <MobileIcon
           onClick={() => {
@@ -234,6 +243,13 @@ const Navbar = () => {
           </GithubButton>
         </MobileMenu>
       )}
+      <Avatar onClick={setMode}sx={{backgroundColor:'transparent'}} >
+                            {mode ? (
+                                <DarkModeOutlinedIcon sx={{color:"black"}} />
+                            ) : (
+                                <LightModeOutlinedIcon  />
+                            )}
+                        </Avatar>
     </Nav>
   );
 };

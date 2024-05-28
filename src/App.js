@@ -1,6 +1,6 @@
 import "./App.css";
 import styled, { ThemeProvider } from "styled-components";
-import { darkTheme } from "./utils/Themes";
+import { darkTheme,lightTheme } from "./utils/Themes";
 import Navbar from "./components/Navbar";
 import Hero from "./components/HeroSection";
 import Skills from "./components/Skills";
@@ -11,6 +11,8 @@ import { BrowserRouter as Router } from "react-router-dom";
 import Contact from "./components/Contact";
 import Footer from "./components/Footer";
 import { ToastContainer } from 'react-toastify';
+import { useMode } from "./store/modeStore";
+
 
 const Body = styled.div`
   background-color: ${({ theme }) => theme.bg};
@@ -36,9 +38,10 @@ const Wrapper = styled.div`
 `;
 
 function App() {
+  const  {mode}= useMode()
   return (
     <>
-      <ThemeProvider theme={darkTheme}>
+      <ThemeProvider theme={mode?lightTheme:darkTheme}>
         <Router>
           <Navbar />
           <Body>
