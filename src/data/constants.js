@@ -246,7 +246,7 @@ export const projects = [
     description:
       "Developed a lms-library management software.",
     image:
-      "https://res.cloudinary.com/dzexnrzh9/image/upload/v1716959331/personal/Screenshot_2024-05-29_103028_pjdsbc.png",
+      "https://res.cloudinary.com/dzexnrzh9/image/upload/v1717055302/personal/Eduport_promrs.jpg",
     tags: ["React Js","Mui","Git","GitHub","Netlify","Node js","MongoDb","Express js"],
     category: " lms-library management software ",
     github: "https://github.com/iamvysh",
