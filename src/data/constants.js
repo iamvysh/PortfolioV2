@@ -7,7 +7,7 @@ export const Bio = {
     " Armed with a BSc in Electronics, I've dived headfirst into the world of development. My fervor lies in harnessing technology to solve real-world challenges, and I'm dedicated to advancing this endeavor.",
   github: "https://github.com/iamvysh",
   resume:
-    "https://drive.google.com/file/d/10ECKoxRE5TcTIyXUv733D9Qpv4uzDO7i/view?usp=drive_link",
+    "https://drive.google.com/file/d/12UJM_6s2VLoZoSBLC0jAbpW1_zz7ASX_/view?usp=sharing",
   linkedin: "https://www.linkedin.com/in/vyshnav-t/",
 };
 
